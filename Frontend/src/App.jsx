@@ -8,7 +8,7 @@ function App() {
 
   const callApi = async (endpoint, method = 'GET') => {
     try {
-      const res = await fetch(`https://upskill-task-33-backend.vercel.app${endpoint}`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}${endpoint}`, {
         method:method,
         credentials: 'include', // Important for cookies
         headers: {
