@@ -23,7 +23,8 @@ app.get('/set-cookie', (req, res) => {
   res.cookie('username', 'Ayush', {
     maxAge: 3600000, // 1 hour
     httpOnly: true,
-    secure: true
+    secure: true,
+    sameSite: 'none',
   });
   res.json({ message: 'Cookie has been set!' });
 });
